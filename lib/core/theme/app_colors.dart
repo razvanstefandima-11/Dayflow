@@ -55,4 +55,3 @@ class AppColors {
   static const Color priorityHigh = Color(0xFFF97316); // Orange
   static const Color priorityUrgent = Color(0xFFEF4444); // Red
 }
-

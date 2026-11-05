@@ -91,3 +91,10 @@ The test suite covers unit tests for models and providers as well as widget test
 ```bash
 flutter test
 ```
+
+## Changelog
+
+### v1.1.0 - Clean Initial State
+- **Empty Task List by Default**: Removed hardcoded sample/example tasks from initial application launch. The application now starts completely clean with an intuitive empty state ready for user-created tasks.
+- **Persistence Optimization**: Streamlined `SharedPreferencesStorageService` to load strictly user-persisted tasks with no initialization overhead or unnecessary seed payloads.
+- **Test Coverage Expansion**: Added widget test verifying clean dashboard and empty state rendering when no tasks exist.

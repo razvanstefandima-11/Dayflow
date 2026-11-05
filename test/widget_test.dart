@@ -1,4 +1,5 @@
 import 'package:antigravity_todo_test/main.dart';
+import 'package:antigravity_todo_test/widgets/empty_state.dart';
 import 'package:antigravity_todo_test/widgets/stats_card.dart';
 import 'package:antigravity_todo_test/widgets/task_card.dart';
 import 'package:flutter/material.dart';
@@ -110,5 +111,28 @@ void main() {
     // Only Test Task 2 should be visible (Completed)
     expect(find.text('Test Task 1'), findsNothing);
     expect(find.text('Test Task 2'), findsOneWidget);
+  });
+
+  testWidgets('AntigravityTodoApp renders empty state when no tasks exist', (
+    WidgetTester tester,
+  ) async {
+    tester.view.physicalSize = const Size(1080, 2400);
+    tester.view.devicePixelRatio = 2.5;
+    addTearDown(() => tester.view.resetPhysicalSize());
+
+    final mockStorage = MockStorageService(initialTasks: []);
+
+    await tester.pumpWidget(AntigravityTodoApp(storageService: mockStorage));
+    await tester.pumpAndSettle();
+
+    expect(find.byType(EmptyState), findsOneWidget);
+    expect(find.text('No tasks yet'), findsNWidgets(2));
+    expect(
+      find.text(
+        'Stay organized and boost productivity by adding your first task.',
+      ),
+      findsOneWidget,
+    );
+    expect(find.byType(TaskCard), findsNothing);
   });
 }

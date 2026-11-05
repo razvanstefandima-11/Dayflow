@@ -69,4 +69,3 @@ class DateFormatter {
     return _timeFormat.format(dt);
   }
 }
-

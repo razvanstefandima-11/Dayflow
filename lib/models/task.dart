@@ -98,4 +98,3 @@ class Task {
       isCompleted.hashCode ^
       createdAt.hashCode;
 }
-
