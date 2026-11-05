@@ -20,21 +20,21 @@ void main() async {
     ),
   );
 
-  runApp(const AntigravityTodoApp());
+  runApp(const DayflowApp());
 }
 
-/// Root widget of the Todo application
-class AntigravityTodoApp extends StatelessWidget {
+/// Root widget of the Dayflow application
+class DayflowApp extends StatelessWidget {
   final StorageService? storageService;
 
-  const AntigravityTodoApp({super.key, this.storageService});
+  const DayflowApp({super.key, this.storageService});
 
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<TaskProvider>(
       create: (_) => TaskProvider(storageService: storageService),
       child: MaterialApp(
-        title: 'Antigravity To-Do',
+        title: 'Dayflow',
         debugShowCheckedModeBanner: false,
         theme: AppTheme.lightTheme,
         darkTheme: AppTheme.darkTheme,
@@ -44,3 +44,6 @@ class AntigravityTodoApp extends StatelessWidget {
     );
   }
 }
+
+// Backwards compatibility alias
+typedef AntigravityTodoApp = DayflowApp;

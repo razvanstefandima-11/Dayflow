@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="antigravity_todo_test"
+        android:label="Dayflow"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

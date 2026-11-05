@@ -1,4 +1,4 @@
-# Antigravity To-Do App
+# Dayflow
 
 A modern, polished, and full-featured productivity To-Do application built with Flutter & Dart following Material 3 design guidelines.
 
@@ -68,8 +68,8 @@ lib/
 
 ```bash
 # Clone the repository
-git clone https://github.com/razvanstefandima-11/antigravity-todo-app.git
-cd antigravity-todo-app
+git clone https://github.com/razvanstefandima-11/Dayflow.git
+cd Dayflow
 
 # Get dependencies
 flutter pub get
@@ -93,6 +93,11 @@ flutter test
 ```
 
 ## Changelog
+
+### v1.2.0 - Rebranded to Dayflow & Custom App Icon
+- **App Rebranding**: Renamed application to **Dayflow** across Android, Web, Linux, Windows, and macOS manifests.
+- **Custom App Icon**: Updated launcher icons across all platforms using the modern Dayflow productivity stopwatch icon.
+- **Repository Rename**: Renamed GitHub repository to `Dayflow`.
 
 ### v1.1.0 - Clean Initial State
 - **Empty Task List by Default**: Removed hardcoded sample/example tasks from initial application launch. The application now starts completely clean with an intuitive empty state ready for user-created tasks.
